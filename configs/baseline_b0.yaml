@@ -1,0 +1,60 @@
+# BirdCLEF+ 2026 — Stage 1 Baseline Config
+# 对应 DES-001 §三 3.1
+
+model:
+  name: tf_efficientnet_b0_ns
+  pretrained: true
+  in_chans: 1
+  num_classes: 234
+  gem_p: 3.0
+  dropout: 0.3
+
+audio:
+  sample_rate: 32000
+  clip_duration: 5.0
+
+spectrogram:
+  n_fft: 1024
+  hop_length: 320
+  n_mels: 128
+  fmin: 50
+  fmax: 14000
+
+training:
+  epochs: 30
+  batch_size: 64
+  optimizer: AdamW
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  scheduler: CosineAnnealingWarmRestarts
+  T_0: 10
+  warmup_epochs: 2
+  n_folds: 5
+
+loss:
+  bce_weight: 0.7
+  focal_weight: 0.3
+  focal_gamma: 2.0
+  focal_alpha: 0.25
+  secondary_label_weight: 0.3
+
+class_multiplier:
+  Aves: 1.0
+  Amphibia: 20.0
+  Insecta: 50.0
+  Mammalia: 30.0
+  Reptilia: 100.0
+
+augmentation:
+  mixup_prob: 0.3
+  mixup_alpha: 0.15
+  time_mask_prob: 0.3
+  time_mask_width: 50
+  freq_mask_prob: 0.3
+  freq_mask_width: 20
+  noise_prob: 0.2
+  noise_std: 0.005
+  gain_prob: 0.3
+  gain_range: [-6, 6]
+
+seed: 42

@@ -1,0 +1,21 @@
+# BirdCLEF+ 2026 - Local development dependencies
+# GPU training on Kaggle/Colab; this covers EDA + local dev.
+
+# Core data science
+numpy
+pandas
+matplotlib
+seaborn
+
+# Audio processing
+librosa
+soundfile
+
+# ML utilities
+scikit-learn
+timm
+tqdm
+
+# Notebook
+jupyter
+ipykernel

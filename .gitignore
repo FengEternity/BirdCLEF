@@ -1,0 +1,39 @@
+# Data
+data/raw/
+data/processed/
+data/external/
+*.ogg
+*.wav
+*.mp3
+*.flac
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.pkl
+
+# Experiments (large files)
+experiments/*/checkpoints/
+experiments/*/logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kaggle
+*.zip

@@ -1,0 +1,14 @@
+{
+  "id": "montyeternity/birdclef2026-baseline-b0-training",
+  "title": "BirdCLEF2026 Baseline B0 Training",
+  "code_file": "train_baseline_b0.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "competition_sources": ["birdclef-2026"],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "accelerator": "gpu_t4x2"
+}
