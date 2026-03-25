@@ -8,14 +8,14 @@
 ## 当前阶段
 
 > **竞赛截止**: 2026-06-03（约 10 周）
-> **当前排名**: 未提交
+> **当前排名**: 未提交（CV AUC=0.9755，待 LB 验证）
 > **目标排名**: Top 5%（~Top 57 / 1134 队伍）
 
 | 阶段 | 状态 |
 |------|------|
 | 竞赛调研与方案设计 | 🟢 已完成 |
 | 数据 EDA | 🟢 已完成 |
-| 基线模型搭建 | 🔴 未开始 |
+| 基线模型搭建 | 🟢 已完成（V7b, CV AUC=0.9755） |
 | 模型调优 + 伪标签 | 🔴 未开始 |
 | SED 模型 | 🔴 未开始 |
 | 集成融合 | 🔴 未开始 |
@@ -29,6 +29,7 @@
 | ANAL-001 | analyze | [竞赛深度分析](analyze/ANAL-001-competition-analysis.md) | ✅ done | 2026-03-24 |
 | ANAL-002 | analyze | [数据 EDA 分析](analyze/ANAL-002-data-eda.md) | ✅ done | 2026-03-25 |
 | DES-001 | design | [模型架构设计方案](design/DES-001-model-architecture.md) | 🔧 implementing | 2026-03-25 |
+| JOUR-0325 | journal | [3月25日工作日志](journal/2026-03-25.md) | ✅ done | 2026-03-25 |
 
 ## 文档目录结构
 
@@ -52,6 +53,47 @@ docs/
 ```
 
 ## 近期工作（最新在上）
+
+### 2026-03-25（Kaggle 训练调试 + Git 仓库建立）
+
+#### Kaggle 训练迭代（V1→V7b）
+
+- **V1-V3**: 初始推送，遇到 Kaggle 环境兼容性问题
+  - V3 被分配 P100 GPU（SM 6.0），PyTorch 2.10+cu128 不支持 → `CUDA error: no kernel image`
+- **V4**: 移除耗时的音频时长扫描（8 min → 0），`load_audio` 加异常处理
+  - 仍被分配 P100，同样 CUDA 报错
+- **V5**: 添加 P100 自动检测+兼容 PyTorch 安装（`torch.cuda.get_device_capability()[0] < 7` 时安装 2.5.1+cu124）
+- **V6**: 全面性能优化
+  - **librosa → torchaudio**：音频加载和 mel 频谱计算
+  - **insect_energy 从 mel 估算**：移除额外 STFT 开销
+  - `NUM_WORKERS=4`, `persistent_workers=True`, `prefetch_factor=3`
+  - `cudnn.benchmark=True`, `zero_grad(set_to_none=True)`
+  - 但训练 12 epoch 后 **AUC 始终 ~0.50**（等同随机猜测）
+- **关键 Bug 发现**: `torchaudio 2.10` 移除了 `torchaudio.info()` API
+  - 导致 `load_audio_fast` 的 `except` 分支捕获 `AttributeError`
+  - **所有音频返回零向量**，模型在训练纯静音
+  - 这是 AUC=0.50 的根本原因
+- **V7b（当前版本）**: 修复 `torchaudio.info()` → 直接 `torchaudio.load()` + 重采样后截取
+  - 简化模型：移除 GeM / hour_embed / insect_energy，使用标准 `global_pool='avg'`
+  - 简化损失：纯 BCEWithLogitsLoss，无 class weights / focal loss
+  - 添加诊断打印（mel 统计、logits 分布、正负样本预测对比）
+  - **Epoch 1 AUC = 0.8124**（191 个有效物种），确认训练正常
+  - **最终结果：10 epoch, Best AUC = 0.9755**（epoch 9）
+  - 正负样本分离度：342x（Pred@pos=0.615 vs Pred@neg=0.0018）
+  - 总训练时间：~82 分钟（单卡 T4）
+
+#### 性能调试经验
+
+- **DataParallel 对小模型无效**：B0（4.8M 参数）GPU 计算极快，瓶颈在 CPU 数据加载
+  - 单卡 4.28s/it → DataParallel 双卡 6.36s/it（更慢）
+  - 通信开销 > 计算并行收益
+- **数据加载是真正瓶颈**：librosa / torchaudio 的 CPU mel 计算、OGG 解码
+- 当前速度：~604s/epoch（单卡 T4），10 epoch 预计 ~100 min
+
+#### 仓库管理
+
+- `git init` + 关联远程仓库 `git@github.com:FengEternity/BirdCLEF.git`（SSH）
+- 初始提交推送到 `main` 分支（39 files, notebooks / src / docs / configs）
 
 ### 2026-03-25（数据 EDA + 深度分析 + 跨年对比 + 伪标签预估）
 
@@ -86,14 +128,18 @@ docs/
 
 ## 待办事项
 
-- [ ] 注册 Kaggle 竞赛
+- [x] 注册 Kaggle 竞赛
 - [x] 下载训练数据
 - [x] 数据 EDA + 物种分布分析
 - [x] 搭建本地开发环境（.venv + 依赖）
 - [x] 编写 Stage 1 基线代码 + Kaggle Notebook
-- [ ] 搭建训练环境（Kaggle Notebook GPU）
-- [ ] 在 Kaggle 上运行 Stage 1 训练，获得 CV AUC
+- [x] 搭建训练环境（Kaggle Notebook GPU）
+- [x] 在 Kaggle 上运行 Stage 1 训练 → **CV AUC=0.9755**
+- [x] Git 仓库建立并推送到 GitHub
+- [x] Stage 1 训练完成，最终 CV AUC=0.9755
 - [ ] 首次提交，验证 LB 分数
+- [ ] 恢复完整模型（class weights + focal loss + GeM + insect_energy）
+- [ ] Stage 2 模型（B3/B5 + SED）
 
 ---
 
@@ -104,5 +150,5 @@ docs/
 | 分析文档 (analyze/) | 2 |
 | 设计方案 (design/) | 1 |
 | 实验记录 (experiment/) | 0 |
-| 工作日志 (journal/) | 1 |
+| 工作日志 (journal/) | 2 |
 | 归档 (archive/) | 0 |
