@@ -8,18 +8,18 @@
 ## 当前阶段
 
 > **竞赛截止**: 2026-06-03（约 10 周）
-> **当前排名**: 未提交（CV AUC=0.9755，待 LB 验证）
+> **当前排名**: LB Score = 0.779（CV AUC=0.9776）
 > **目标排名**: Top 5%（~Top 57 / 1134 队伍）
 
 | 阶段 | 状态 |
 |------|------|
 | 竞赛调研与方案设计 | 🟢 已完成 |
 | 数据 EDA | 🟢 已完成 |
-| 基线模型搭建 | 🟢 已完成（V7b, CV AUC=0.9755） |
+| 基线模型搭建 | 🟢 已完成（V8, CV AUC=0.9776） |
 | 模型调优 + 伪标签 | 🔴 未开始 |
 | SED 模型 | 🔴 未开始 |
 | 集成融合 | 🔴 未开始 |
-| 推理优化 + 提交 | 🔴 未开始 |
+| 推理优化 + 提交 | 🟡 进行中（推理 Notebook 通过，待 LB 提交） |
 | Working Note 论文 | 🔴 未开始 |
 
 ## 活跃文档
@@ -53,6 +53,18 @@ docs/
 ```
 
 ## 近期工作（最新在上）
+
+### 2026-03-26（推理 Notebook 调试 + 首次提交准备）
+
+- V8 训练 Notebook 在 Kaggle "Save & Run All" 成功完成：**CV AUC = 0.9776**
+- 推理 Notebook 调试（V7→V10）：
+  - V7: Cell 5 语法错误（shell 命令意外拼接到代码行）
+  - V8: 模型路径未找到 — kernel_sources 挂载在 `/kaggle/input/notebooks/montyeternity/` 下，非顶层
+  - V9: 增强路径搜索（`rglob` 递归搜索）+ 调试输出，模型成功加载
+  - V9: `test_soundscapes/` 为空（公开 LB 环境），提交验证 assert 失败
+  - V10: 空 test 时使用 `sample_submission.csv` 作为占位，验证逻辑容错
+- 推理 Notebook V10 成功运行，生成 `submission.csv`（3 rows placeholder）
+- **首次 LB 提交：Score = 0.779**（CV AUC=0.9776 vs LB 0.779 差距分析：单 fold、简化模型、域偏移）
 
 ### 2026-03-25（Kaggle 训练调试 + Git 仓库建立）
 
@@ -137,7 +149,7 @@ docs/
 - [x] 在 Kaggle 上运行 Stage 1 训练 → **CV AUC=0.9755**
 - [x] Git 仓库建立并推送到 GitHub
 - [x] Stage 1 训练完成，最终 CV AUC=0.9755
-- [ ] 首次提交，验证 LB 分数
+- [x] 首次提交，LB Score = 0.779
 - [ ] 恢复完整模型（class weights + focal loss + GeM + insect_energy）
 - [ ] Stage 2 模型（B3/B5 + SED）
 

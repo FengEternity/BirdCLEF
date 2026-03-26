@@ -1,0 +1,13 @@
+{
+  "id": "montyeternity/birdclef2026-baseline-b0-submission",
+  "title": "BirdCLEF2026 Baseline B0 Submission",
+  "code_file": "inference_submission.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "competition_sources": ["birdclef-2026"],
+  "dataset_sources": [],
+  "kernel_sources": ["montyeternity/birdclef2026-baseline-b0-training"]
+}
