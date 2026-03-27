@@ -1,0 +1,13 @@
+{
+  "id": "montyeternity/birdclef2026-lb-diagnostic-analysis",
+  "title": "BirdCLEF2026 LB Diagnostic Analysis",
+  "code_file": "analysis_diagnostic.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "competition_sources": ["birdclef-2026"],
+  "dataset_sources": [],
+  "kernel_sources": ["montyeternity/birdclef2026-baseline-b0-training"]
+}

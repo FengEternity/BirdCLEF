@@ -1,0 +1,170 @@
+[{"stream_name":"stderr","time":5.946785431,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":5.946857976,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":5.946863932,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":5.946867638,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.522863936,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.522893213,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.522898588,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.52290251,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":7.754272004,"data":"GPU caps: [6.0]\n"}
+,{"stream_name":"stdout","time":7.754322176,"data":"SM 6.0 \u003c 7.0 (P100) — using CPU\n"}
+,{"stream_name":"stdout","time":23.078192855,"data":"[15.5s] PyTorch 2.10.0+cu128, Device: cpu\n"}
+,{"stream_name":"stdout","time":23.304995687,"data":"[15.8s] Data: /kaggle/input/competitions/birdclef-2026\n"}
+,{"stream_name":"stdout","time":23.305032345,"data":"Model: /kaggle/input/notebooks/montyeternity/birdclef2026-baseline-b0-training -\u003e [PosixPath('/kaggle/input/notebooks/montyeternity/birdclef2026-baseline-b0-training/best_fold0.pth')]\n"}
+,{"stream_name":"stdout","time":23.305041567,"data":"Samples: 35549, Species: 234\n"}
+,{"stream_name":"stdout","time":23.656346205,"data":"[16.1s] Model loaded: best_fold0.pth\n"}
+,{"stream_name":"stdout","time":23.857394515,"data":"=== Analysis A: Training Validation AUC ===\n"}
+,{"stream_name":"stdout","time":25.095609109,"data":"Fold 0 val set: 5099 samples\n"}
+,{"stream_name":"stdout","time":391.679922591,"data":"\n"}
+,{"stream_name":"stdout","time":391.679990542,"data":"[384.1s] CV macro AUC (recomputed): 0.9444 (191 species)\n"}
+,{"stream_name":"stdout","time":391.679997435,"data":"\n"}
+,{"stream_name":"stdout","time":391.680002907,"data":"Worst 20 species (CV):\n"}
+,{"stream_name":"stdout","time":391.680008017,"data":"  209233          (Mammalia    ) AUC=0.4823 n=2\n"}
+,{"stream_name":"stdout","time":391.680013462,"data":"  tattin1         (Aves        ) AUC=0.7690 n=138\n"}
+,{"stream_name":"stdout","time":391.680018417,"data":"  ruther1         (Aves        ) AUC=0.8096 n=86\n"}
+,{"stream_name":"stdout","time":391.680024366,"data":"  gilhum1         (Aves        ) AUC=0.8134 n=117\n"}
+,{"stream_name":"stdout","time":391.680029115,"data":"  undtin1         (Aves        ) AUC=0.8188 n=204\n"}
+,{"stream_name":"stdout","time":391.680033301,"data":"  swthum1         (Aves        ) AUC=0.8219 n=98\n"}
+,{"stream_name":"stdout","time":391.680038838,"data":"  platyr1         (Aves        ) AUC=0.8247 n=36\n"}
+,{"stream_name":"stdout","time":391.680043801,"data":"  brcmar1         (Aves        ) AUC=0.8276 n=123\n"}
+,{"stream_name":"stdout","time":391.68005656,"data":"  fabwre1         (Aves        ) AUC=0.8284 n=79\n"}
+,{"stream_name":"stdout","time":391.680062367,"data":"  thlwre1         (Aves        ) AUC=0.8395 n=213\n"}
+,{"stream_name":"stdout","time":391.680066992,"data":"  bucpar          (Aves        ) AUC=0.8475 n=124\n"}
+,{"stream_name":"stdout","time":391.680072101,"data":"  pluibi1         (Aves        ) AUC=0.8507 n=68\n"}
+,{"stream_name":"stdout","time":391.680077276,"data":"  ruftof1         (Aves        ) AUC=0.8572 n=98\n"}
+,{"stream_name":"stdout","time":391.680102947,"data":"  chobla1         (Aves        ) AUC=0.8640 n=244\n"}
+,{"stream_name":"stdout","time":391.680107127,"data":"  sibtan2         (Aves        ) AUC=0.8656 n=226\n"}
+,{"stream_name":"stdout","time":391.680110441,"data":"  glteme1         (Aves        ) AUC=0.8684 n=109\n"}
+,{"stream_name":"stdout","time":391.680113819,"data":"  pvttyr1         (Aves        ) AUC=0.8694 n=241\n"}
+,{"stream_name":"stdout","time":391.680117638,"data":"  redjun          (Aves        ) AUC=0.8705 n=208\n"}
+,{"stream_name":"stdout","time":391.680121541,"data":"  saytan1         (Aves        ) AUC=0.8723 n=278\n"}
+,{"stream_name":"stdout","time":391.680124866,"data":"  smbtin1         (Aves        ) AUC=0.8737 n=94\n"}
+,{"stream_name":"stdout","time":391.776889873,"data":"\n"}
+,{"stream_name":"stdout","time":391.776923539,"data":"=== Analysis B: Soundscape AUC ===\n"}
+,{"stream_name":"stdout","time":391.776928938,"data":"Soundscape labels: 1478 segments\n"}
+,{"stream_name":"stdout","time":391.776933447,"data":"Columns: ['filename', 'start', 'end', 'primary_label']\n"}
+,{"stream_name":"stdout","time":391.776937685,"data":"                                    filename     start       end  \\\n"}
+,{"stream_name":"stdout","time":391.77694131,"data":"0  BC2026_Train_0039_S22_20211231_201500.ogg  00:00:00  00:00:05   \n"}
+,{"stream_name":"stdout","time":391.77694519,"data":"1  BC2026_Train_0039_S22_20211231_201500.ogg  00:00:05  00:00:10   \n"}
+,{"stream_name":"stdout","time":391.776948643,"data":"2  BC2026_Train_0039_S22_20211231_201500.ogg  00:00:10  00:00:15   \n"}
+,{"stream_name":"stdout","time":391.776952333,"data":"\n"}
+,{"stream_name":"stdout","time":391.776955133,"data":"                    primary_label  \n"}
+,{"stream_name":"stdout","time":391.776957612,"data":"0  22961;23158;24321;517063;65380  \n"}
+,{"stream_name":"stdout","time":391.776959773,"data":"1  22961;23158;24321;517063;65380  \n"}
+,{"stream_name":"stdout","time":391.776962003,"data":"2  22961;23158;24321;517063;65380  \n"}
+,{"stream_name":"stdout","time":391.776964618,"data":"Species in soundscape labels: 75\n"}
+,{"stream_name":"stdout","time":455.198003121,"data":"\n"}
+,{"stream_name":"stdout","time":455.198058521,"data":"[447.7s] Soundscape macro AUC: 0.6831 (75 species)\n"}
+,{"stream_name":"stdout","time":455.198064011,"data":"Domain shift gap: CV 0.9444 - SC 0.6831 = 0.2614\n"}
+,{"stream_name":"stdout","time":455.198067358,"data":"\n"}
+,{"stream_name":"stdout","time":455.198070518,"data":"Worst 20 species (Soundscape):\n"}
+,{"stream_name":"stdout","time":455.198073663,"data":"  wfwduc1         (Aves        ) SC_AUC=0.0752 CV_AUC=0.998\n"}
+,{"stream_name":"stdout","time":455.198076851,"data":"  25073           (Amphibia    ) SC_AUC=0.0990 CV_AUC=N/A\n"}
+,{"stream_name":"stdout","time":455.19808007,"data":"  limpki          (Aves        ) SC_AUC=0.1148 CV_AUC=0.964\n"}
+,{"stream_name":"stdout","time":455.19808317,"data":"  67107           (Amphibia    ) SC_AUC=0.1199 CV_AUC=1.000\n"}
+,{"stream_name":"stdout","time":455.198086128,"data":"  ruther1         (Aves        ) SC_AUC=0.1213 CV_AUC=0.810\n"}
+,{"stream_name":"stdout","time":455.198090442,"data":"  74113           (Mammalia    ) SC_AUC=0.2185 CV_AUC=0.932\n"}
+,{"stream_name":"stdout","time":455.198096402,"data":"  47158son04      (Insecta     ) SC_AUC=0.2278 CV_AUC=N/A\n"}
+,{"stream_name":"stdout","time":455.1981016,"data":"  redjun          (Aves        ) SC_AUC=0.2393 CV_AUC=0.871\n"}
+,{"stream_name":"stdout","time":455.198106436,"data":"  rufhor2         (Aves        ) SC_AUC=0.2694 CV_AUC=0.892\n"}
+,{"stream_name":"stdout","time":455.198126261,"data":"  bunibi1         (Aves        ) SC_AUC=0.2836 CV_AUC=0.967\n"}
+,{"stream_name":"stdout","time":455.198130385,"data":"  67252           (Amphibia    ) SC_AUC=0.3134 CV_AUC=N/A\n"}
+,{"stream_name":"stdout","time":455.198133833,"data":"  47158son10      (Insecta     ) SC_AUC=0.3294 CV_AUC=N/A\n"}
+,{"stream_name":"stdout","time":455.198137244,"data":"  326272          (Amphibia    ) SC_AUC=0.3395 CV_AUC=0.999\n"}
+,{"stream_name":"stdout","time":455.198140718,"data":"  47158son05      (Insecta     ) SC_AUC=0.3548 CV_AUC=N/A\n"}
+,{"stream_name":"stdout","time":455.198144074,"data":"  nacnig1         (Aves        ) SC_AUC=0.3894 CV_AUC=0.990\n"}
+,{"stream_name":"stdout","time":455.19814746,"data":"  1491113         (Amphibia    ) SC_AUC=0.3973 CV_AUC=N/A\n"}
+,{"stream_name":"stdout","time":455.198150829,"data":"  517063          (Amphibia    ) SC_AUC=0.4122 CV_AUC=N/A\n"}
+,{"stream_name":"stdout","time":455.198154152,"data":"  strher2         (Aves        ) SC_AUC=0.4355 CV_AUC=1.000\n"}
+,{"stream_name":"stdout","time":455.198157661,"data":"  24321           (Amphibia    ) SC_AUC=0.5032 CV_AUC=N/A\n"}
+,{"stream_name":"stdout","time":455.198160954,"data":"  magant1         (Aves        ) SC_AUC=0.5149 CV_AUC=0.966\n"}
+,{"stream_name":"stdout","time":455.212827165,"data":"\n"}
+,{"stream_name":"stdout","time":455.212855973,"data":"=== Analysis C: Per-class AUC ===\n"}
+,{"stream_name":"stdout","time":455.212861614,"data":"Class            CV AUC     SC AUC      Gap  CV_n  SC_n\n"}
+,{"stream_name":"stdout","time":455.212866106,"data":"-------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":455.212870223,"data":"Aves             0.9409     0.6720   0.2689   162    28\n"}
+,{"stream_name":"stdout","time":455.212873974,"data":"Amphibia         0.9871     0.6342   0.3529    21    17\n"}
+,{"stream_name":"stdout","time":455.212877493,"data":"Insecta          0.9985     0.7356   0.2629     2    25\n"}
+,{"stream_name":"stdout","time":455.212880886,"data":"Mammalia         0.8718     0.6212   0.2506     6     4\n"}
+,{"stream_name":"stdout","time":455.212884294,"data":"Reptilia            N/A     0.7569      N/A     0     1\n"}
+,{"stream_name":"stdout","time":455.233621249,"data":"\n"}
+,{"stream_name":"stdout","time":455.233646694,"data":"=== Analysis D: Zero-shot Species ===\n"}
+,{"stream_name":"stdout","time":455.233651773,"data":"Zero-shot species: 28\n"}
+,{"stream_name":"stdout","time":455.233655898,"data":"  1491113         (Amphibia  ) n_pos= 158 SC_AUC=  0.397 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233660365,"data":"  25073           (Amphibia  ) n_pos=  24 SC_AUC=  0.099 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233663882,"data":"  47158son01      (Insecta   ) n_pos=  46 SC_AUC=  0.916 pred@pos_mean=0.0001 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233667677,"data":"  47158son02      (Insecta   ) n_pos=  14 SC_AUC=  0.700 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233671119,"data":"  47158son03      (Insecta   ) n_pos=  66 SC_AUC=  0.699 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233674628,"data":"  47158son04      (Insecta   ) n_pos=  34 SC_AUC=  0.228 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233678204,"data":"  47158son05      (Insecta   ) n_pos=   6 SC_AUC=  0.355 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233681925,"data":"  47158son06      (Insecta   ) n_pos=  36 SC_AUC=  0.517 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.23369623,"data":"  47158son07      (Insecta   ) n_pos=  96 SC_AUC=  0.756 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233700191,"data":"  47158son08      (Insecta   ) n_pos=  34 SC_AUC=  0.853 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.23370368,"data":"  47158son09      (Insecta   ) n_pos=  12 SC_AUC=  0.947 pred@pos_mean=0.0001 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233707278,"data":"  47158son10      (Insecta   ) n_pos=  66 SC_AUC=  0.329 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233710783,"data":"  47158son11      (Insecta   ) n_pos=  72 SC_AUC=  0.650 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233714551,"data":"  47158son12      (Insecta   ) n_pos=  10 SC_AUC=  0.963 pred@pos_mean=0.0001 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233725083,"data":"  47158son13      (Insecta   ) n_pos=  72 SC_AUC=  0.596 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233729248,"data":"  47158son14      (Insecta   ) n_pos=  24 SC_AUC=  0.718 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233733073,"data":"  47158son15      (Insecta   ) n_pos=  24 SC_AUC=  0.834 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233736988,"data":"  47158son16      (Insecta   ) n_pos=  24 SC_AUC=  0.950 pred@pos_mean=0.0001 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.23374042,"data":"  47158son17      (Insecta   ) n_pos=  86 SC_AUC=  0.885 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233744496,"data":"  47158son18      (Insecta   ) n_pos=  24 SC_AUC=  1.000 pred@pos_mean=0.0001 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233749108,"data":"  47158son19      (Insecta   ) n_pos=  10 SC_AUC=  0.869 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233753525,"data":"  47158son20      (Insecta   ) n_pos=  24 SC_AUC=  0.851 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233756911,"data":"  47158son21      (Insecta   ) n_pos=  44 SC_AUC=  0.853 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233761115,"data":"  47158son22      (Insecta   ) n_pos=  48 SC_AUC=  0.873 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233764929,"data":"  47158son23      (Insecta   ) n_pos=  48 SC_AUC=  0.863 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233769143,"data":"  47158son24      (Insecta   ) n_pos=  48 SC_AUC=  0.525 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.233772616,"data":"  47158son25      (Insecta   ) n_pos= 168 SC_AUC=  0.660 pred@pos_mean=0.0000 pred@pos_max=0.0000\n"}
+,{"stream_name":"stdout","time":455.233776099,"data":"  517063          (Amphibia  ) n_pos= 626 SC_AUC=  0.412 pred@pos_mean=0.0000 pred@pos_max=0.0001\n"}
+,{"stream_name":"stdout","time":455.264954274,"data":"\n"}
+,{"stream_name":"stdout","time":455.264983696,"data":"=== Analysis E: Prediction Calibration ===\n"}
+,{"stream_name":"stdout","time":455.264988844,"data":"Positive predictions (n=6244):\n"}
+,{"stream_name":"stdout","time":455.264992513,"data":"  mean=0.0674 std=0.1555 median=0.0021\n"}
+,{"stream_name":"stdout","time":455.264995857,"data":"  min=0.000000 max=0.942938\n"}
+,{"stream_name":"stdout","time":455.265000119,"data":"Negative predictions (n=339608):\n"}
+,{"stream_name":"stdout","time":455.265003607,"data":"  mean=0.003437 std=0.021695 median=0.000173\n"}
+,{"stream_name":"stdout","time":455.265020816,"data":"\n"}
+,{"stream_name":"stdout","time":455.265024227,"data":"Separation ratio: 19.6x\n"}
+,{"stream_name":"stdout","time":455.265027456,"data":"\n"}
+,{"stream_name":"stdout","time":455.265031336,"data":"Positive prediction distribution:\n"}
+,{"stream_name":"stdout","time":455.265034841,"data":"  \u003e 0.01: 37.3%\n"}
+,{"stream_name":"stdout","time":455.265038786,"data":"  \u003e 0.05: 23.5%\n"}
+,{"stream_name":"stdout","time":455.265041982,"data":"  \u003e 0.10: 16.5%\n"}
+,{"stream_name":"stdout","time":455.26504549,"data":"  \u003e 0.20: 10.7%\n"}
+,{"stream_name":"stdout","time":455.265049629,"data":"  \u003e 0.30: 7.9%\n"}
+,{"stream_name":"stdout","time":455.265053127,"data":"  \u003e 0.50: 3.7%\n"}
+,{"stream_name":"stdout","time":455.265056326,"data":"  \u003e 0.70: 1.0%\n"}
+,{"stream_name":"stdout","time":455.265059865,"data":"  \u003e 0.90: 0.4%\n"}
+,{"stream_name":"stdout","time":455.265063386,"data":"\n"}
+,{"stream_name":"stdout","time":455.265066837,"data":"Threshold analysis (on soundscape):\n"}
+,{"stream_name":"stdout","time":455.265070919,"data":"  t=0.01: P=0.101 R=0.373 F1=0.160 TP=2330 FP=20632 FN=3914\n"}
+,{"stream_name":"stdout","time":455.265074899,"data":"  t=0.05: P=0.281 R=0.235 F1=0.256 TP=1466 FP=3744 FN=4778\n"}
+,{"stream_name":"stdout","time":455.265078685,"data":"  t=0.10: P=0.398 R=0.165 F1=0.233 TP=1030 FP=1558 FN=5214\n"}
+,{"stream_name":"stdout","time":455.265082824,"data":"  t=0.20: P=0.515 R=0.107 F1=0.178 TP=670 FP=632 FN=5574\n"}
+,{"stream_name":"stdout","time":455.265086153,"data":"  t=0.30: P=0.540 R=0.079 F1=0.138 TP=494 FP=420 FN=5750\n"}
+,{"stream_name":"stdout","time":455.265089782,"data":"  t=0.50: P=0.564 R=0.037 F1=0.069 TP=230 FP=178 FN=6014\n"}
+,{"stream_name":"stdout","time":455.265093907,"data":"\n"}
+,{"stream_name":"stdout","time":455.26509767699997,"data":"[447.7s] Analysis E done\n"}
+,{"stream_name":"stdout","time":455.282900131,"data":"\n"}
+,{"stream_name":"stdout","time":455.282933263,"data":"Saved: /kaggle/working/diagnostic_results.json (22.0KB)\n"}
+,{"stream_name":"stdout","time":455.282939202,"data":"Total analysis time: 447.8s\n"}
+,{"stream_name":"stdout","time":455.282943573,"data":"\n"}
+,{"stream_name":"stdout","time":455.282947275,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":455.282951608,"data":"SUMMARY\n"}
+,{"stream_name":"stdout","time":455.282955616,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":455.282959814,"data":"CV macro AUC:         0.9444\n"}
+,{"stream_name":"stdout","time":455.282963217,"data":"Soundscape macro AUC: 0.6831\n"}
+,{"stream_name":"stdout","time":455.282966474,"data":"Domain shift gap:     0.2614\n"}
+,{"stream_name":"stdout","time":455.28296978,"data":"Zero-shot species:    28\n"}
+,{"stream_name":"stdout","time":455.282973161,"data":"LB Score:             0.779\n"}
+,{"stream_name":"stderr","time":460.363405856,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":460.363437664,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":460.50474419,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":460.504766284,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":461.168341029,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":461.469646897,"data":"[NbConvertApp] Writing 63316 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":463.921052485,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":464.817524981,"data":"[NbConvertApp] Writing 419607 bytes to __results__.html\n"}
+]
