@@ -1,0 +1,215 @@
+[{"stream_name":"stderr","time":7.522143092,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.522208667,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.5222161419999996,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.522220492,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.139253644,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.139292119,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.139297438,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.139301958,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":14.041834673,"data":"PyTorch 2.10.0+cu128 OK\n"}
+,{"stream_name":"stdout","time":26.51830126,"data":"PyTorch 2.10.0+cu128, torchaudio 2.10.0+cu128, CUDA: True, GPUs: 2\n"}
+,{"stream_name":"stdout","time":26.518351616,"data":"  GPU 0: Tesla T4\n"}
+,{"stream_name":"stdout","time":26.518358574,"data":"  GPU 1: Tesla T4\n"}
+,{"stream_name":"stdout","time":26.540260313,"data":"Data: /kaggle/input/competitions/birdclef-2026, Device: cuda\n"}
+,{"stream_name":"stdout","time":26.7868442,"data":"Samples: 35549, Species: 234\n"}
+,{"stream_name":"stdout","time":26.786897921,"data":"Columns: ['primary_label', 'secondary_labels', 'type', 'latitude', 'longitude', 'scientific_name', 'common_name', 'class_name', 'inat_taxon_id', 'author', 'license', 'rating', 'url', 'filename', 'collection']\n"}
+,{"stream_name":"stdout","time":26.786917915,"data":"\n"}
+,{"stream_name":"stdout","time":26.786923476,"data":"Sample rows:\n"}
+,{"stream_name":"stdout","time":26.786927901,"data":"                  filename primary_label secondary_labels         author\n"}
+,{"stream_name":"stdout","time":26.78693243,"data":"0  1161364/iNat1216197.ogg       1161364               []  Lucas Barbosa\n"}
+,{"stream_name":"stdout","time":26.786936741,"data":"1  1161364/iNat1114648.ogg       1161364               []  Lucas Barbosa\n"}
+,{"stream_name":"stdout","time":26.786941188,"data":"2   1161364/iNat810195.ogg       1161364               []  Lucas Barbosa\n"}
+,{"stream_name":"stdout","time":26.786946088,"data":"\n"}
+,{"stream_name":"stdout","time":26.78695118,"data":"Audio files example:\n"}
+,{"stream_name":"stdout","time":26.786955555,"data":"  rufgna3 (0.0KB)\n"}
+,{"stream_name":"stdout","time":26.786960103,"data":"  greani1 (0.0KB)\n"}
+,{"stream_name":"stdout","time":26.786964283,"data":"  blttit1 (0.0KB)\n"}
+,{"stream_name":"stdout","time":26.786968476,"data":"  65377 (0.0KB)\n"}
+,{"stream_name":"stdout","time":26.786972673,"data":"  linwoo1 (0.0KB)\n"}
+,{"stream_name":"stdout","time":27.53335947,"data":"=== Audio Loading Test ===\n"}
+,{"stream_name":"stdout","time":28.046491319,"data":"  purjay1/XC299441.ogg: audio=torch.Size([160000]) min=-1.0425 max=1.1342 std=0.1262 | mel=torch.Size([128, 501]) min=-3.53 max=2.58 std=1.00\n"}
+,{"stream_name":"stdout","time":28.046531329,"data":"  saytan1/iNat588079.ogg: audio=torch.Size([160000]) min=-0.2222 max=0.3482 std=0.0178 | mel=torch.Size([128, 501]) min=-1.95 max=3.32 std=1.00\n"}
+,{"stream_name":"stdout","time":28.046536683,"data":"  thlwre1/XC350961.ogg: audio=torch.Size([160000]) min=-0.0374 max=0.0349 std=0.0051 | mel=torch.Size([128, 501]) min=-2.97 max=3.62 std=1.00\n"}
+,{"stream_name":"stdout","time":28.046560543,"data":"  whbwar2/XC835399.ogg: audio=torch.Size([160000]) min=-0.2877 max=0.3464 std=0.0482 | mel=torch.Size([128, 501]) min=-1.65 max=7.38 std=1.00\n"}
+,{"stream_name":"stdout","time":28.046564161,"data":"  whbwar2/iNat502152.ogg: audio=torch.Size([160000]) min=-1.0697 max=1.0359 std=0.0748 | mel=torch.Size([128, 501]) min=-2.74 max=4.91 std=1.00\n"}
+,{"stream_name":"stdout","time":28.481435233,"data":"Model output: torch.Size([2, 234]), 4.3M params\n"}
+,{"stream_name":"stdout","time":28.481495907,"data":"Output stats: mean=0.0060, std=0.1566, min=-0.4147, max=0.5159\n"}
+,{"stream_name":"stdout","time":30.148714344,"data":"\n"}
+,{"stream_name":"stdout","time":30.148757059,"data":"============================================================\n"}
+,{"stream_name":"stdout","time":30.148765281,"data":"  Fold 1/5 | Train: 30450, Val: 5099\n"}
+,{"stream_name":"stdout","time":30.148771314,"data":"============================================================\n"}
+,{"stream_name":"stderr","time":94.096757051,"data":"'[Errno -3] Temporary failure in name resolution' thrown while requesting HEAD https://huggingface.co/timm/tf_efficientnet_b0.ns_jft_in1k/resolve/main/model.safetensors\n"}
+,{"stream_name":"stderr","time":94.096805196,"data":"\n"}
+,{"stream_name":"stderr","time":94.096812779,"data":"'[Errno -3] Temporary failure in name resolution' thrown while requesting HEAD https://huggingface.co/timm/tf_efficientnet_b0.ns_jft_in1k/resolve/main/model.safetensors\n"}
+,{"stream_name":"stderr","time":94.097696893,"data":"Retrying in 1s [Retry 1/5].\n"}
+,{"stream_name":"stderr","time":94.097725248,"data":"\n"}
+,{"stream_name":"stderr","time":94.097731905,"data":"Retrying in 1s [Retry 1/5].\n"}
+,{"stream_name":"stderr","time":98.75764535,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":98.757678586,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":98.75768747,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":98.757757855,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":98.757931864,"data":"  File \"/usr/local/lib/python3.12/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":98.757996456,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":98.758682016,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":98.758709289,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":98.758714181,"data":"Exception encountered at \"In [9]\":\n"}
+,{"stream_name":"stderr","time":98.758720892,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":98.758725354,"data":"RuntimeError                              Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":98.758730995,"data":"/tmp/ipykernel_24/4258640360.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":98.758736281,"data":"     15                     persistent_workers=True, prefetch_factor=3)\n"}
+,{"stream_name":"stderr","time":98.758742054,"data":"     16 \n"}
+,{"stream_name":"stderr","time":98.758747208,"data":"---\u003e 17     model = BirdCLEFB0(pretrained=True).to(DEVICE)\n"}
+,{"stream_name":"stderr","time":98.758752396,"data":"     18     crit = nn.BCEWithLogitsLoss()  # simple BCE, no class weights\n"}
+,{"stream_name":"stderr","time":98.758757446,"data":"     19     opt = torch.optim.AdamW(model.parameters(), lr=CFG.LR, weight_decay=CFG.WEIGHT_DECAY)\n"}
+,{"stream_name":"stderr","time":98.758772722,"data":"\n"}
+,{"stream_name":"stderr","time":98.758776654,"data":"/tmp/ipykernel_24/2169976833.py in __init__(self, pretrained)\n"}
+,{"stream_name":"stderr","time":98.758780467,"data":"      2     def __init__(self, pretrained=True):\n"}
+,{"stream_name":"stderr","time":98.758783585,"data":"      3         super().__init__()\n"}
+,{"stream_name":"stderr","time":98.758786948,"data":"----\u003e 4         self.backbone = timm.create_model('tf_efficientnet_b0_ns', pretrained=pretrained,\n"}
+,{"stream_name":"stderr","time":98.758790823,"data":"      5                                           in_chans=1, num_classes=0, global_pool='avg')\n"}
+,{"stream_name":"stderr","time":98.758794679,"data":"      6         self.dropout = nn.Dropout(0.3)\n"}
+,{"stream_name":"stderr","time":98.758798344,"data":"\n"}
+,{"stream_name":"stderr","time":98.75880195,"data":"/usr/local/lib/python3.12/dist-packages/timm/models/_factory.py in create_model(model_name, pretrained, pretrained_cfg, pretrained_cfg_overlay, checkpoint_path, cache_dir, scriptable, exportable, no_jit, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.758806593,"data":"    136     create_fn = model_entrypoint(model_name)\n"}
+,{"stream_name":"stderr","time":98.758810075,"data":"    137     with set_layer_config(scriptable=scriptable, exportable=exportable, no_jit=no_jit):\n"}
+,{"stream_name":"stderr","time":98.758813662,"data":"--\u003e 138         model = create_fn(\n"}
+,{"stream_name":"stderr","time":98.758817224,"data":"    139             pretrained=pretrained,\n"}
+,{"stream_name":"stderr","time":98.758820687,"data":"    140             pretrained_cfg=pretrained_cfg,\n"}
+,{"stream_name":"stderr","time":98.758824698,"data":"\n"}
+,{"stream_name":"stderr","time":98.758828501,"data":"/usr/local/lib/python3.12/dist-packages/timm/models/_registry.py in _fn(pretrained, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.758832279,"data":"    143         warnings.warn(f'Mapping deprecated model name {deprecated_name} to current {current_name}.', stacklevel=2)\n"}
+,{"stream_name":"stderr","time":98.758836057,"data":"    144         pretrained_cfg = kwargs.pop('pretrained_cfg', None)\n"}
+,{"stream_name":"stderr","time":98.758839442,"data":"--\u003e 145         return current_fn(pretrained=pretrained, pretrained_cfg=pretrained_cfg or current_tag, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.758843474,"data":"    146     return _fn\n"}
+,{"stream_name":"stderr","time":98.758846967,"data":"    147 \n"}
+,{"stream_name":"stderr","time":98.758850484,"data":"\n"}
+,{"stream_name":"stderr","time":98.758854876,"data":"/usr/local/lib/python3.12/dist-packages/timm/models/efficientnet.py in tf_efficientnet_b0(pretrained, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.758858517,"data":"   2434     kwargs.setdefault('bn_eps', BN_EPS_TF_DEFAULT)\n"}
+,{"stream_name":"stderr","time":98.758862269,"data":"   2435     kwargs.setdefault('pad_type', 'same')\n"}
+,{"stream_name":"stderr","time":98.758868532,"data":"-\u003e 2436     model = _gen_efficientnet(\n"}
+,{"stream_name":"stderr","time":98.758906776,"data":"   2437         'tf_efficientnet_b0', channel_multiplier=1.0, depth_multiplier=1.0, pretrained=pretrained, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.758910871,"data":"   2438     return model\n"}
+,{"stream_name":"stderr","time":98.758914757,"data":"\n"}
+,{"stream_name":"stderr","time":98.758922665,"data":"/usr/local/lib/python3.12/dist-packages/timm/models/efficientnet.py in _gen_efficientnet(variant, channel_multiplier, depth_multiplier, channel_divisor, group_size, pretrained, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.758935467,"data":"    762         **kwargs,\n"}
+,{"stream_name":"stderr","time":98.758939082,"data":"    763     )\n"}
+,{"stream_name":"stderr","time":98.758942657,"data":"--\u003e 764     model = _create_effnet(variant, pretrained, **model_kwargs)\n"}
+,{"stream_name":"stderr","time":98.758946791,"data":"    765     return model\n"}
+,{"stream_name":"stderr","time":98.758950198,"data":"    766 \n"}
+,{"stream_name":"stderr","time":98.758953366,"data":"\n"}
+,{"stream_name":"stderr","time":98.758956692,"data":"/usr/local/lib/python3.12/dist-packages/timm/models/efficientnet.py in _create_effnet(variant, pretrained, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.758960541,"data":"    463     pretrained_strict = kwargs.pop('pretrained_strict', True)\n"}
+,{"stream_name":"stderr","time":98.758964156,"data":"    464 \n"}
+,{"stream_name":"stderr","time":98.758967301,"data":"--\u003e 465     model = build_model_with_cfg(\n"}
+,{"stream_name":"stderr","time":98.758970998,"data":"    466         model_cls,\n"}
+,{"stream_name":"stderr","time":98.758974496,"data":"    467         variant,\n"}
+,{"stream_name":"stderr","time":98.758977584,"data":"\n"}
+,{"stream_name":"stderr","time":98.758987059,"data":"/usr/local/lib/python3.12/dist-packages/timm/models/_builder.py in build_model_with_cfg(model_cls, variant, pretrained, pretrained_cfg, pretrained_cfg_overlay, model_cfg, feature_cfg, pretrained_strict, pretrained_filter_fn, cache_dir, kwargs_filter, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.75899155,"data":"    455     num_classes_pretrained = 0 if features else getattr(model, 'num_classes', kwargs.get('num_classes', 1000))\n"}
+,{"stream_name":"stderr","time":98.758995336,"data":"    456     if pretrained:\n"}
+,{"stream_name":"stderr","time":98.758998747,"data":"--\u003e 457         load_pretrained(\n"}
+,{"stream_name":"stderr","time":98.759002203,"data":"    458             model,\n"}
+,{"stream_name":"stderr","time":98.759005895,"data":"    459             pretrained_cfg=pretrained_cfg,\n"}
+,{"stream_name":"stderr","time":98.759009411,"data":"\n"}
+,{"stream_name":"stderr","time":98.759013251,"data":"/usr/local/lib/python3.12/dist-packages/timm/models/_builder.py in load_pretrained(model, pretrained_cfg, num_classes, in_chans, filter_fn, strict, cache_dir)\n"}
+,{"stream_name":"stderr","time":98.759017234,"data":"    224                 state_dict = load_state_dict_from_hf(*pretrained_loc, cache_dir=cache_dir)\n"}
+,{"stream_name":"stderr","time":98.759020999,"data":"    225         else:\n"}
+,{"stream_name":"stderr","time":98.759024459,"data":"--\u003e 226             state_dict = load_state_dict_from_hf(pretrained_loc, weights_only=True, cache_dir=cache_dir)\n"}
+,{"stream_name":"stderr","time":98.759028509,"data":"    227     elif load_from == 'local-dir':\n"}
+,{"stream_name":"stderr","time":98.759031921,"data":"    228         _logger.info(f'Loading pretrained weights from local directory ({pretrained_loc})')\n"}
+,{"stream_name":"stderr","time":98.759035701,"data":"\n"}
+,{"stream_name":"stderr","time":98.759039605,"data":"/usr/local/lib/python3.12/dist-packages/timm/models/_hub.py in load_state_dict_from_hf(model_id, filename, weights_only, cache_dir)\n"}
+,{"stream_name":"stderr","time":98.759043544,"data":"    224         for safe_filename in _get_safe_alternatives(filename):\n"}
+,{"stream_name":"stderr","time":98.759047105,"data":"    225             try:\n"}
+,{"stream_name":"stderr","time":98.759050656,"data":"--\u003e 226                 cached_safe_file = hf_hub_download(\n"}
+,{"stream_name":"stderr","time":98.759054342,"data":"    227                     repo_id=hf_model_id,\n"}
+,{"stream_name":"stderr","time":98.759061485,"data":"    228                     filename=safe_filename,\n"}
+,{"stream_name":"stderr","time":98.759065181,"data":"\n"}
+,{"stream_name":"stderr","time":98.759068823,"data":"/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py in _inner_fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.759072916,"data":"     87         kwargs = smoothly_deprecate_legacy_arguments(fn_name=fn.__name__, kwargs=kwargs)\n"}
+,{"stream_name":"stderr","time":98.759076594,"data":"     88 \n"}
+,{"stream_name":"stderr","time":98.759079838,"data":"---\u003e 89         return fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.759083623,"data":"     90 \n"}
+,{"stream_name":"stderr","time":98.759087052,"data":"     91     return _inner_fn  # type: ignore\n"}
+,{"stream_name":"stderr","time":98.759090552,"data":"\n"}
+,{"stream_name":"stderr","time":98.759094693,"data":"/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py in hf_hub_download(repo_id, filename, subfolder, repo_type, revision, library_name, library_version, cache_dir, local_dir, user_agent, force_download, etag_timeout, token, local_files_only, headers, endpoint, tqdm_class, dry_run)\n"}
+,{"stream_name":"stderr","time":98.759099104,"data":"   1030         )\n"}
+,{"stream_name":"stderr","time":98.759102104,"data":"   1031     else:\n"}
+,{"stream_name":"stderr","time":98.759105705,"data":"-\u003e 1032         return _hf_hub_download_to_cache_dir(\n"}
+,{"stream_name":"stderr","time":98.759109359,"data":"   1033             # Destination\n"}
+,{"stream_name":"stderr","time":98.759112764,"data":"   1034             cache_dir=cache_dir,\n"}
+,{"stream_name":"stderr","time":98.759116323,"data":"\n"}
+,{"stream_name":"stderr","time":98.759120084,"data":"/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py in _hf_hub_download_to_cache_dir(cache_dir, repo_id, filename, repo_type, revision, endpoint, etag_timeout, headers, token, local_files_only, force_download, tqdm_class, dry_run)\n"}
+,{"stream_name":"stderr","time":98.759124461,"data":"   1163                 logger.info(\"No local file found. Retrying..\")\n"}
+,{"stream_name":"stderr","time":98.759128225,"data":"   1164                 (url_to_download, etag, commit_hash, expected_size, xet_file_data, head_call_error) = (\n"}
+,{"stream_name":"stderr","time":98.759132162,"data":"-\u003e 1165                     _get_metadata_or_catch_error(\n"}
+,{"stream_name":"stderr","time":98.759135789,"data":"   1166                         repo_id=repo_id,\n"}
+,{"stream_name":"stderr","time":98.759139285,"data":"   1167                         filename=filename,\n"}
+,{"stream_name":"stderr","time":98.759142853,"data":"\n"}
+,{"stream_name":"stderr","time":98.759146247,"data":"/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py in _get_metadata_or_catch_error(repo_id, filename, repo_type, revision, endpoint, etag_timeout, headers, token, local_files_only, relative_filename, storage_folder, retry_on_errors)\n"}
+,{"stream_name":"stderr","time":98.759150426,"data":"   1697         try:\n"}
+,{"stream_name":"stderr","time":98.759153705,"data":"   1698             try:\n"}
+,{"stream_name":"stderr","time":98.759158086,"data":"-\u003e 1699                 metadata = get_hf_file_metadata(\n"}
+,{"stream_name":"stderr","time":98.759161965,"data":"   1700                     url=url,\n"}
+,{"stream_name":"stderr","time":98.759165383,"data":"   1701                     timeout=etag_timeout,\n"}
+,{"stream_name":"stderr","time":98.759168979,"data":"\n"}
+,{"stream_name":"stderr","time":98.759172341,"data":"/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_validators.py in _inner_fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.75917888,"data":"     87         kwargs = smoothly_deprecate_legacy_arguments(fn_name=fn.__name__, kwargs=kwargs)\n"}
+,{"stream_name":"stderr","time":98.759182684,"data":"     88 \n"}
+,{"stream_name":"stderr","time":98.759186166,"data":"---\u003e 89         return fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.759189663,"data":"     90 \n"}
+,{"stream_name":"stderr","time":98.759192916,"data":"     91     return _inner_fn  # type: ignore\n"}
+,{"stream_name":"stderr","time":98.759196721,"data":"\n"}
+,{"stream_name":"stderr","time":98.759200087,"data":"/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py in get_hf_file_metadata(url, token, timeout, library_name, library_version, user_agent, headers, endpoint, retry_on_errors)\n"}
+,{"stream_name":"stderr","time":98.75920414,"data":"   1620 \n"}
+,{"stream_name":"stderr","time":98.759207578,"data":"   1621     # Retrieve metadata\n"}
+,{"stream_name":"stderr","time":98.759210973,"data":"-\u003e 1622     response = _httpx_follow_relative_redirects(\n"}
+,{"stream_name":"stderr","time":98.75921467,"data":"   1623         method=\"HEAD\", url=url, headers=hf_headers, timeout=timeout, retry_on_errors=retry_on_errors\n"}
+,{"stream_name":"stderr","time":98.759218945,"data":"   1624     )\n"}
+,{"stream_name":"stderr","time":98.759222266,"data":"\n"}
+,{"stream_name":"stderr","time":98.759225602,"data":"/usr/local/lib/python3.12/dist-packages/huggingface_hub/file_download.py in _httpx_follow_relative_redirects(method, url, retry_on_errors, **httpx_kwargs)\n"}
+,{"stream_name":"stderr","time":98.759229408,"data":"    300 \n"}
+,{"stream_name":"stderr","time":98.759232793,"data":"    301     while True:\n"}
+,{"stream_name":"stderr","time":98.759236214,"data":"--\u003e 302         response = http_backoff(\n"}
+,{"stream_name":"stderr","time":98.759239651,"data":"    303             method=method,\n"}
+,{"stream_name":"stderr","time":98.759243138,"data":"    304             url=url,\n"}
+,{"stream_name":"stderr","time":98.759246595,"data":"\n"}
+,{"stream_name":"stderr","time":98.759249856,"data":"/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py in http_backoff(method, url, max_retries, base_wait_time, max_wait_time, retry_on_exceptions, retry_on_status_codes, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.759253993,"data":"    504     \u003e issue on [Github](https://github.com/huggingface/huggingface_hub).\n"}
+,{"stream_name":"stderr","time":98.759257783,"data":"    505     \"\"\"\n"}
+,{"stream_name":"stderr","time":98.759261247,"data":"--\u003e 506     return next(\n"}
+,{"stream_name":"stderr","time":98.759265177,"data":"    507         _http_backoff_base(\n"}
+,{"stream_name":"stderr","time":98.75926873,"data":"    508             method=method,\n"}
+,{"stream_name":"stderr","time":98.759272122,"data":"\n"}
+,{"stream_name":"stderr","time":98.759275604,"data":"/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_http.py in _http_backoff_base(method, url, max_retries, base_wait_time, max_wait_time, retry_on_exceptions, retry_on_status_codes, stream, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.759279848,"data":"    412                         return\n"}
+,{"stream_name":"stderr","time":98.759283317,"data":"    413             else:\n"}
+,{"stream_name":"stderr","time":98.759286832,"data":"--\u003e 414                 response = client.request(method=method, url=url, **kwargs)\n"}
+,{"stream_name":"stderr","time":98.759290753,"data":"    415                 if not _should_retry(response):\n"}
+,{"stream_name":"stderr","time":98.759297148,"data":"    416                     yield response\n"}
+,{"stream_name":"stderr","time":98.759300803,"data":"\n"}
+,{"stream_name":"stderr","time":98.759304695,"data":"/usr/local/lib/python3.12/dist-packages/httpx/_client.py in request(self, method, url, content, data, files, json, params, headers, cookies, auth, follow_redirects, timeout, extensions)\n"}
+,{"stream_name":"stderr","time":98.759308686,"data":"    823             extensions=extensions,\n"}
+,{"stream_name":"stderr","time":98.759312101,"data":"    824         )\n"}
+,{"stream_name":"stderr","time":98.759315721,"data":"--\u003e 825         return self.send(request, auth=auth, follow_redirects=follow_redirects)\n"}
+,{"stream_name":"stderr","time":98.759319338,"data":"    826 \n"}
+,{"stream_name":"stderr","time":98.7593227,"data":"    827     @contextmanager\n"}
+,{"stream_name":"stderr","time":98.75932618,"data":"\n"}
+,{"stream_name":"stderr","time":98.759329569,"data":"/usr/local/lib/python3.12/dist-packages/httpx/_client.py in send(self, request, stream, auth, follow_redirects)\n"}
+,{"stream_name":"stderr","time":98.759333247,"data":"    899         \"\"\"\n"}
+,{"stream_name":"stderr","time":98.759336821,"data":"    900         if self._state == ClientState.CLOSED:\n"}
+,{"stream_name":"stderr","time":98.759340374,"data":"--\u003e 901             raise RuntimeError(\"Cannot send a request, as the client has been closed.\")\n"}
+,{"stream_name":"stderr","time":98.759344238,"data":"    902 \n"}
+,{"stream_name":"stderr","time":98.759347241,"data":"    903         self._state = ClientState.OPENED\n"}
+,{"stream_name":"stderr","time":98.759351041,"data":"\n"}
+,{"stream_name":"stderr","time":98.759354268,"data":"RuntimeError: Cannot send a request, as the client has been closed.\n"}
+,{"stream_name":"stderr","time":98.759357544,"data":"\n"}
+,{"stream_name":"stderr","time":100.88899225,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":100.889030611,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":101.073486339,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":101.073518987,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":101.756630271,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":102.057201681,"data":"[NbConvertApp] Writing 54631 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":104.426809663,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":105.308752938,"data":"[NbConvertApp] Writing 402441 bytes to __results__.html\n"}
+]

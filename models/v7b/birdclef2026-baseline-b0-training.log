@@ -1,0 +1,57 @@
+[{"stream_name":"stderr","time":6.521438042,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.521525517,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.521530292,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.521533359,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.134916355,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.134947698,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.134952434,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.134956308,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":12.577783844,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":12.577821776,"data":"    Found GPU0 Tesla P100-PCIE-16GB which is of cuda capability 6.0.\n"}
+,{"stream_name":"stderr","time":12.577828305,"data":"    Minimum and Maximum cuda capability supported by this version of PyTorch is\n"}
+,{"stream_name":"stderr","time":12.577833097,"data":"    (7.0) - (12.0)\n"}
+,{"stream_name":"stderr","time":12.577837699,"data":"    \n"}
+,{"stream_name":"stderr","time":12.577842056,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":12.577846527,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":12.577856809,"data":"    Please install PyTorch with a following CUDA\n"}
+,{"stream_name":"stderr","time":12.577860684000001,"data":"    configurations:  12.6 following instructions at\n"}
+,{"stream_name":"stderr","time":12.57786373,"data":"    https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":12.577866734,"data":"    \n"}
+,{"stream_name":"stderr","time":12.577869642,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":12.577872622,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":12.5778759,"data":"Tesla P100-PCIE-16GB with CUDA capability sm_60 is not compatible with the current PyTorch installation.\n"}
+,{"stream_name":"stderr","time":12.577879114,"data":"The current PyTorch install supports CUDA capabilities sm_70 sm_75 sm_80 sm_86 sm_90 sm_100 sm_120.\n"}
+,{"stream_name":"stderr","time":12.577882354,"data":"If you want to use the Tesla P100-PCIE-16GB GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":12.577885931,"data":"\n"}
+,{"stream_name":"stderr","time":12.577889507,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":12.577908394,"data":"\n"}
+,{"stream_name":"stderr","time":12.577913668,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":12.577919494,"data":"    Found GPU0 Tesla P100-PCIE-16GB which is of cuda capability 6.0.\n"}
+,{"stream_name":"stderr","time":12.57792472,"data":"    Minimum and Maximum cuda capability supported by this version of PyTorch is\n"}
+,{"stream_name":"stderr","time":12.577929485,"data":"    (7.0) - (12.0)\n"}
+,{"stream_name":"stderr","time":12.577933846,"data":"    \n"}
+,{"stream_name":"stderr","time":12.577938234,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":12.577954209,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":12.577957943,"data":"    Please install PyTorch with a following CUDA\n"}
+,{"stream_name":"stderr","time":12.577961778,"data":"    configurations:  12.6 following instructions at\n"}
+,{"stream_name":"stderr","time":12.577965354,"data":"    https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":12.57796879,"data":"    \n"}
+,{"stream_name":"stderr","time":12.577977109999999,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":12.577979492,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":12.577981852,"data":"Tesla P100-PCIE-16GB with CUDA capability sm_60 is not compatible with the current PyTorch installation.\n"}
+,{"stream_name":"stderr","time":12.577984217000001,"data":"The current PyTorch install supports CUDA capabilities sm_70 sm_75 sm_80 sm_86 sm_90 sm_100 sm_120.\n"}
+,{"stream_name":"stderr","time":12.577986671,"data":"If you want to use the Tesla P100-PCIE-16GB GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":12.578001217,"data":"\n"}
+,{"stream_name":"stderr","time":12.578005034,"data":"  queued_call()\n"}
+,{"stream_name":"stdout","time":12.578771805,"data":"GPU SM (6, 0) \u003c 7, installing compatible PyTorch...\n"}
+,{"stream_name":"stdout","time":23.086450911,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 908.2/908.2 MB 2.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":23.288193986,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 908.2/908.2 MB 2.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.185869074,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 39.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.387776609,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 39.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.582182602,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 73.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.784149456,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/24.6 MB 73.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.845650621,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 45.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.047521055,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 883.7/883.7 kB 45.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.1461396,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 97.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.347940668,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 97.7 MB/s eta 0:00:00\n"}
+]
